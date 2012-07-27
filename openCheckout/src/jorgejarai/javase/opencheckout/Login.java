@@ -5,7 +5,7 @@
  * @author Jorge Jara <jorgejarainostroza@gmail.com>
  *
  * Esta clase es para el sistema de log-in del programa, el cual sólo requiere
- * una contraseña almacenada en una base de datos MySQL (encriptada con SHA1).
+ * presionar un botón (¿que tonto cierto?)
  *
  * Copyright (C) 2012 Jorge Jara Inostroza.
  *
@@ -107,7 +107,7 @@ public class Login extends JFrame {
         constraints.anchor = constraints.WEST;
         // Añadimos la etiqueta al frame
         this.getContentPane().add(contrasena_tbox, constraints);
-        constraints.weighty = 0.0; // Se 'resetea el estiramiento de la fila.
+        constraints.weighty = 0.0; // Se 'resetea' el estiramiento de la fila.
 
         // Botón Aceptar
         // Definición de constantes de layout
@@ -120,11 +120,11 @@ public class Login extends JFrame {
         this.aceptar.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent evt) {
-                        // TODO Añadir verificación de contraseña
+                        // TODO: Enlazar a la ventana de caja
                     }
                 }
         );
-        // Añadimos la etiqueta al frame
+        // Añadimos el botón al frame
         this.getContentPane().add(aceptar, constraints);
     }
 }

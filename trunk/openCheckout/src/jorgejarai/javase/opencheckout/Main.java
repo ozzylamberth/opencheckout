@@ -28,7 +28,9 @@ package jorgejarai.javase.opencheckout;
 
 public class Main {
     public static void main(String[] args) {
+        // Genero una instancia de la ventana de login
         Login login = new Login();
-        login.setVisible(true);
+        login.setLocationRelativeTo(null); // Centro el Frame
+        login.setVisible(true); // Lo hago visible
     }
 }

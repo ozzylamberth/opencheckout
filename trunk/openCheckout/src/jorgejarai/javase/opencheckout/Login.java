@@ -35,11 +35,11 @@ import javax.swing.*;
 
 public class Login extends JFrame {
 
+    private static int retorno;
+
     // Componentes Swing necesarios para ejecucción
     JLabel bienvenida = new JLabel("Bienvenido a openCheckout 0.1");
-    JLabel peticion = new JLabel("Ingrese su contraseña para acceder:");
-    JLabel contrasena = new JLabel("Contraseña:");
-    JPasswordField contrasena_tbox = new JPasswordField(15);
+    JLabel peticion = new JLabel("Presione Aceptar para entrar");
     JButton aceptar = new JButton("Aceptar");
 
     public Login() {
@@ -86,29 +86,6 @@ public class Login extends JFrame {
         this.getContentPane().add(peticion, constraints);
         constraints.weighty = 0.0; // Se 'resetea el estiramiento de la fila.
 
-        // Etiqueta de contraseña y cuadro de contraseña
-        // Definición de constantes de layout
-        constraints.gridx = 0;
-        constraints.gridy = 2;
-        constraints.gridwidth = 1;
-        constraints.gridheight = 1;
-        constraints.weighty = 1.0;
-        constraints.anchor = constraints.EAST;
-        // Añadimos la etiqueta al frame
-        this.getContentPane().add(contrasena, constraints);
-        constraints.weighty = 0.0; // Se 'resetea el estiramiento de la fila.
-
-        // Definición de constantes de layout
-        constraints.gridx = 1;
-        constraints.gridy = 2;
-        constraints.gridwidth = 1;
-        constraints.gridheight = 1;
-        constraints.weighty = 1.0;
-        constraints.anchor = constraints.WEST;
-        // Añadimos la etiqueta al frame
-        this.getContentPane().add(contrasena_tbox, constraints);
-        constraints.weighty = 0.0; // Se 'resetea' el estiramiento de la fila.
-
         // Botón Aceptar
         // Definición de constantes de layout
         constraints.gridx = 0;
@@ -120,11 +97,16 @@ public class Login extends JFrame {
         this.aceptar.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent evt) {
-                        // TODO: Enlazar a la ventana de caja
+                        Main.finalizar();
+                        dispose();
                     }
                 }
         );
         // Añadimos el botón al frame
         this.getContentPane().add(aceptar, constraints);
+    }
+
+    static public int getRetorno() {
+        return retorno;
     }
 }

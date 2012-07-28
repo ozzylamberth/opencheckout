@@ -32,5 +32,17 @@ public class Main {
         Login login = new Login();
         login.setLocationRelativeTo(null); // Centro el Frame
         login.setVisible(true); // Lo hago visible
+
+        /*
+         * Cuando en el cuadro de log-in se presione el botón Aceptar,
+         * se llamará a la función finalizar() y llamará al frame Principal.
+         */
+    }
+
+    public static void finalizar() {
+        // Genero una instancia de la ventana principal
+        Principal principal = new Principal();
+        principal.setLocationRelativeTo(null); // Centro el Frame
+        principal.setVisible(true); // Lo hago visible
     }
 }

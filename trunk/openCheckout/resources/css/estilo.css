@@ -1,0 +1,54 @@
+#contenedor {
+	text-align: left;
+	width: 900px;
+	margin: auto;
+}
+
+#lateral {
+	width: 180px;
+	height: 604px;
+	background-color: #CCCCCC;
+	float: left;
+	border: #000000 1px solid;
+}
+
+#principal {
+	height: 604px;
+	margin-left: 180px;
+	background-color: #FFFFFF;
+	border-top: #000000 1px solid;
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+}
+
+#titulo {
+	height: 100px;
+	width: 898px;
+	background-color: #006699;
+	padding: 0px;
+	margin: 0px;
+	border-top: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-right: #000000 1px solid;
+}
+
+#piepagina {
+	width: 100%;
+}
+
+#frame {
+	width: 100%;
+	height: auto;
+}
+
+#blanco {
+	color: #FFFFFF;
+}
+
+#hora {
+	color: #FFFFFF;
+}
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
